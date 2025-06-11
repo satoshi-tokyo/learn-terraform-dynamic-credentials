@@ -7,7 +7,13 @@ variable "instance_type" {
 variable "tags" {
   description = "Tags for instances"
   type        = map(any)
-  default     = {}
+  default     = "default tag"
+}
+
+variable "instance_name" {
+  description = "EC2 instance name"
+  default     = "Provisioned by Terraform"
+  type        = string
 }
 
 variable "aws_region" {
